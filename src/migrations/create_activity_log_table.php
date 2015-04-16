@@ -15,6 +15,7 @@ class CreateActivityLogTable extends Migration
             $table->integer('user_id')->nullable();
             $table->string('text');
             $table->string('ip_address', 64);
+            $table->integer('portal_id')->nullable();
             $table->timestamps();
         });
     }
