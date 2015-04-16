@@ -23,7 +23,7 @@ class EloquentHandler implements ActivitylogHandlerInterface
                 'text'       => $text,
                 'user_id'    => ($userId == '' ? null : $userId),
                 'ip_address' => $attributes['ipAddress'],
-                '$portal_id' => ($portal_id == null ? null : $portal_id) ,
+                'portal_id' => ($portal_id == null ? null : $portal_id) ,
             ]
         );
 
