@@ -45,9 +45,10 @@ class ActivitylogSupervisor
         $userId = $this->normalizeUserId($userId);
 
         $ipAddress = Request::getClientIp();
+        $portal_id = Request::route()->parameters('portal')['portal']->id;
 
         foreach ($this->logHandlers as $logHandler) {
-            $logHandler->log($text, $userId, compact('ipAddress'));
+            $logHandler->log($text, $userId, compact('ipAddress'),$portal_id);
         }
 
         return true;
