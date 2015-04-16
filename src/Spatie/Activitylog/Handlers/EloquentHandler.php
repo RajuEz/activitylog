@@ -16,13 +16,14 @@ class EloquentHandler implements ActivitylogHandlerInterface
      *
      * @return boolean
      */
-    public function log($text, $userId = '', $attributes = [])
+    public function log($text, $userId = '', $attributes = [], $portal_id = null)
     {
         Activity::create(
             [
                 'text'       => $text,
                 'user_id'    => ($userId == '' ? null : $userId),
                 'ip_address' => $attributes['ipAddress'],
+                '$portal_id' => ($portal_id == null ? null : $portal_id ,
             ]
         );
 
