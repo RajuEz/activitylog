@@ -1,4 +1,4 @@
-# Log the activity of your users
+# Log the activity of your users - (Modified for Personnel use)
 
 [![Latest Version](https://img.shields.io/github/release/freekmurze/activitylog.svg?style=flat-square)](https://github.com/freekmurze/activitylog/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
