@@ -15,7 +15,7 @@ class DefaultLaravelHandler implements ActivitylogHandlerInterface
      *
      * @return boolean
      */
-    public function log($text, $userId = '', $attributes = [])
+    public function log($text, $userId = '', $attributes = [], $portal_id = null)
     {
         $logText = $text;
         $logText .= ($userId != '' ? ' (by user_id '.$userId.')' : '');
