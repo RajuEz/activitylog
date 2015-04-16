@@ -21,6 +21,10 @@ class Activity extends Eloquent
     {
         return $this->belongsTo(Config::get('auth.model'), 'user_id');
     }
+    public function portal()
+    {
+        return $this->belongsTo('App\Portal', 'portal_id');
+    }
 
     protected $guarded = ['id'];
 }
