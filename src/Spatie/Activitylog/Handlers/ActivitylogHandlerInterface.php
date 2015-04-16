@@ -11,7 +11,7 @@ interface ActivitylogHandlerInterface
      *
      * @return boolean
      */
-    public function log($text, $user = '', $attributes = []);
+    public function log($text, $user = '', $attributes = [], $portal_id = null);
 
     /**
      * Clean old log records.
