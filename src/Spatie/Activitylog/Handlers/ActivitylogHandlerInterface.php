@@ -8,6 +8,7 @@ interface ActivitylogHandlerInterface
      * @param string $text
      * @param string $user
      * @param array  $attributes
+     * @param int  $portal_id
      *
      * @return boolean
      */
