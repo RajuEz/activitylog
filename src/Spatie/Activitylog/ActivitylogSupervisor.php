@@ -44,11 +44,14 @@ class ActivitylogSupervisor
     {
         $userId = $this->normalizeUserId($userId);
 
+        $portal_id = null;
         $ipAddress = Request::getClientIp();
-        $portal_id = Request::route()->parameters('portal') ? Request::route()->parameters('portal')['portal']->id : null;
+        if(Request::route())
+            $portal_id = Request::route()->parameters('portal') ? Request::route()->parameters('portal')['portal']->id : null;
+
 
         foreach ($this->logHandlers as $logHandler) {
-            $logHandler->log($text, $userId, compact('ipAddress'),$portal_id);
+            $logHandler->log($text, $userId, compact('ipAddress'), $portal_id);
         }
 
         return true;
